@@ -24,7 +24,7 @@ export class AppComponent {
     avatar: 'https://us.123rf.com/450wm/redlinevector/redlinevector1704/redlinevector170402590/75360779-icono-simple-del-programador.jpg?ver=6'
   }
   /* Array */
-
+  namesArr: string[] = ['Loe','Gonzalo', 'Juan']
 
   increaseAge() {
     this.age += 1
