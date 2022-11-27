@@ -86,4 +86,14 @@
   <ul>
     <li *ngFor="let student of studentsArr; index as i">{{i}}: {{student}}</li>
   </ul>
+  <h3>Ejemplo 2</h3>
+  <input type="text" [(ngModel)]="inpStudent"/>
+  <button (click)="addStudent()">Agregar</button>
+  <ul>
+    <li *ngFor="let student of studentsArr; index as i">{{i}}: {{student}}
+      <button (click)="deleteStudent(i)">Delete</button>
+    </li>
+    <p *ngIf="studentsArr.length===0">No hay estudiantes</p>
+  </ul>
+  <h2>Ejemplo 3</h2>
 </div>
