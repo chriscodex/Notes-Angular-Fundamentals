@@ -28,6 +28,11 @@ export class AppComponent {
   inpStudent: string = ''
 
   /* Objects Array */
+  products = [
+    {
+      name: 'El mejor juguete'
+    }
+  ]
 
   /* Métodos */
   increaseAge() {
