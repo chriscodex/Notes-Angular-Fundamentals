@@ -24,8 +24,10 @@ export class AppComponent {
     avatar: 'https://us.123rf.com/450wm/redlinevector/redlinevector1704/redlinevector170402590/75360779-icono-simple-del-programador.jpg?ver=6'
   }
   /* Array */
-  namesArr: string[] = ['Loe','Gonzalo', 'Juan']
+  studentsArr: string[] = ['Leo','Gonzalo', 'Juan']
+  inpStudent: string = ''
 
+  /* Métodos */
   increaseAge() {
     this.age += 1
   }
@@ -43,5 +45,14 @@ export class AppComponent {
   changeName(event: Event) {
     const element = event.target as HTMLInputElement
     this.person.name = element.value
+  }
+
+  addStudent() {
+    this.studentsArr.push(this.inpStudent)
+    this.inpStudent = ''
+  }
+
+  deleteStudent(index: number) {
+    this.studentsArr.splice(index, 1)
   }
 }

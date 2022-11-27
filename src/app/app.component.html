@@ -79,9 +79,11 @@
   </ng-template>
 </div>
 
+<!--*ngFor - For loop-->
 <div>
   <h2>*ngFor - for loop</h2>
+  <h3>Ejemplo 1</h3>
   <ul>
-    <li></li>
+    <li *ngFor="let student of studentsArr; index as i">{{i}}: {{student}}</li>
   </ul>
 </div>
