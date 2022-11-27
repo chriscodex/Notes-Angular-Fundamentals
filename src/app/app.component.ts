@@ -15,12 +15,16 @@ export class AppComponent {
   imgDocker: string = 'https://miro.medium.com/max/323/1*DPjl0PU5oGDDhajYoof38w.png'
   btnDisabled: boolean = false
   progressValue = 50
+  inputStringTest = ''
+  inputNumberTest: number = 0
   /* Using objects */
   person = {
     name: 'Nicolas',
     lastName: 'Rojas',
     avatar: 'https://us.123rf.com/450wm/redlinevector/redlinevector1704/redlinevector170402590/75360779-icono-simple-del-programador.jpg?ver=6'
   }
+  /* Array */
+
 
   increaseAge() {
     this.age += 1

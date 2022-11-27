@@ -6,14 +6,16 @@
 <img src={{imgAngular}} alt="image" width="50">
 <img src={{imgDocker}} alt="image" width="50">
 <hr/>
-<h1>Propiedades</h1>
+
+<h1>Eventos</h1>
 <!--button by default-->
 <button [disabled]="btnDisabled">Boton 1</button>
-<h2>Property Binding</h2>
 <!--Asignar el valor del estado del atributo de un botón desde la clase AppComponent-->
 <button [disabled]="btnDisabled">Botón 2</button>
 <button (click)="toggleButton()">Toggle</button>
 <br/><br/>
+
+<h2>Property Binding</h2>
 <input type="text" [value]="name"/>
 <br/>
 <progress max="100" [value]="progressValue"></progress>
@@ -29,21 +31,57 @@
   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga odio ipsum illum non quam vel consequatur quia! Harum quaerat et ratione impedit ullam veritatis quo cumque quisquam, esse dolorem provident.</p>
 </div>
 <hr/>
+
 <!--Event Binding-->
 <div>
   <h2>Event Binding</h2>
   <input type="text" [value]="person.name" (keyup)="changeName($event)">
   <p>Nombre: {{person.name}}</p>
+  <p>Valid: {{nameInput.valid}}</p>
 </div>
 <hr/>
+
 <!--ngModel-->
 <div>
   <h2>ngModel - Intercambio bidireccional</h2>
   <input type="text" [(ngModel)]="person.name"/>
   <p>Nombre: {{person.name}}</p>
 </div>
+
 <div>
-  <h2>ngModel - Validaciones</h2>
-  <input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
+  <h2>ngModel - Validaciones Input text</h2>
+  <input type="text" required #nameInput="ngModel" [(ngModel)]="inputStringTest"/>
   <p>Valid: {{nameInput.valid}}</p>
+</div>
+
+<div>
+  <h2>ngModel - Validaciones Input number</h2>
+  <input type="number" max="18" min="5" required #numberInput="ngModel" [(ngModel)]="inputNumberTest"/>
+  <p>Valid: {{numberInput.valid}}</p>
+</div>
+
+<div>
+  <h2>*ngIf - Condicional If</h2>
+  <input type="text" [(ngModel)]="person.name">
+  <!--Condicional If-->
+  <p *ngIf="person.name === 'Eduardo'">Mi nombre es Eduardo</p>
+  <p *ngIf="person.name === 'Luis' && age === 24">Mi nombre es Luis y tengo 24 años</p>
+</div>
+
+<div>
+  <h2>*ngIf - Condicional Else</h2>
+  <input type="text" [(ngModel)]="person.name">
+  <!--Condicional Else-->
+  <p *ngIf="person.name === 'Eduardo'">Mi nombre es Eduardo</p>
+  <p *ngIf="person.name === 'Luis' && age === 24; else myElseBlock">Mi nombre es Luis y tengo 24 años</p>
+  <ng-template #myElseBlock>
+    <p>Bloque de else</p>
+  </ng-template>
+</div>
+
+<div>
+  <h2>*ngFor - for loop</h2>
+  <ul>
+    <li></li>
+  </ul>
 </div>
