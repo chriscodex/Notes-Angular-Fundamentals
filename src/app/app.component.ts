@@ -30,7 +30,8 @@ export class AppComponent {
   /* Objects Array */
   products = [
     {
-      name: 'El mejor juguete'
+      name: 'El mejor juguete',
+      price: 200
     }
   ]
 
