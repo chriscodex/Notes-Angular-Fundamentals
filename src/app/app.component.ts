@@ -27,6 +27,8 @@ export class AppComponent {
   studentsArr: string[] = ['Leo','Gonzalo', 'Juan']
   inpStudent: string = ''
 
+  /* Objects Array */
+
   /* Métodos */
   increaseAge() {
     this.age += 1
