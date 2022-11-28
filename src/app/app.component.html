@@ -112,3 +112,53 @@
   <p *ngSwitchCase="'Gonzalo'">Mi nombre es Gonzalo</p>
   <p *ngSwitchDefault>Ningún nombre coincide</p>
 </div>
+<hr/>
+<!--Estilos CSS-->
+<h2>Estilos CSS</h2>
+<div class="products--grid">
+  <div *ngFor="let product of products">
+    <h3>{{product.name}}</h3>
+    <p>{{product.price}}</p>
+    <img [src]="product.image"/>
+  </div>
+</div>
+
+<h2>Class & Style</h2>
+<!--Estilos dinámicos-->
+<div>
+  <input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name">
+  <p class="message-error" [class.my-invalid-class]="nameInput2.invalid">El campo es requerido</p>
+</div>
+<!--Modificar clase directamente-->
+<div>
+  <p>Nombre</p>
+  <input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name"/>
+  <p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat modi nisi, qui repellendus nihil molestias necessitatibus dolorem, cum, vitae libero ut adipisci. Dicta dolor dolorem dolores ducimus quibusdam doloribus libero!</p>
+</div>
+<!--Modificar tamaños dinamicamente-->
+<div class="tam-dinamic">
+  <div>
+    <input type="text" [(ngModel)]="widthImg" />
+  </div>
+  <div>
+    <img src="https://us.123rf.com/450wm/redlinevector/redlinevector1704/redlinevector170402590/75360779-icono-simple-del-programador.jpg?ver=6" [style.width.%]="widthImg"/>
+  </div>
+</div>
+<hr/>
+
+<!--ngClass & ngStyle-->
+<h2>ngClass & ngStyle</h2>
+
+<!--ngClass-->
+<h3>ngClass</h3>
+<input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name">
+<hr class="line-error"
+  [ngClass]="{
+    'valid': nameInput4.valid,
+    'invalid': nameInput4.invalid
+  }"
+/>
+<p class="message-error" [class.my-invalid-class]="nameInput4.invalid">El campo es requerido</p>
+
+<!--ngStyle-->
+<h3>ngStyle</h3>

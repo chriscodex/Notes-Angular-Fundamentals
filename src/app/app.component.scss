@@ -4,3 +4,55 @@
   overflow-y: scroll;
   background: red;
 }
+/* Mobile First */
+.products--grid {
+  display: flex;
+  flex-direction: column;
+  div {
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    h3, p {
+      margin: 0;
+    }
+  }
+}
+
+/* Estilos dinámicos (Clases)*/
+.message-error {
+  background: red;
+  color: white;
+  opacity: 0;
+  transition: all linear .5s;
+  &.my-invalid-class {
+    opacity: 1;
+  }
+}
+
+/* Tamaño dinámico */
+.tam-dinamic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ngClass */
+.line-error {
+  height: 0;
+  border-bottom: 1px solid;
+  &.invalid {
+    border-color: red;
+  }
+  &.valid {
+    border-color: green;
+  }
+}
+
+@media screen and (min-width: 40em) {
+   .products--grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     grid-gap: 15px;
+   }
+ }
+

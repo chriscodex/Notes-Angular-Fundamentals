@@ -18,6 +18,7 @@ export class AppComponent {
   progressValue = 50
   inputStringTest = ''
   inputNumberTest: number = 0
+  widthImg: number = 10
   /* Using objects */
   person = {
     name: 'Nicolas',
