@@ -33,6 +33,16 @@ export class AppComponent {
       name: 'El mejor juguete',
       price: 200,
       image: './assets/images/juguete.jpg'
+    },
+    {
+      name: 'Bicicleta casi nueva',
+      price: 300,
+      image: './assets/images/bicicleta.jpg'
+    },
+    {
+      name: 'Colección de albumes',
+      price: 300,
+      image: './assets/images/albumes.jpg'
     }
   ]
 
