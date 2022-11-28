@@ -1,5 +1,6 @@
 import { HtmlTagDefinition } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { Product } from './product.model'
 
 /* AppComponent class properties need to be public */
 
@@ -28,7 +29,7 @@ export class AppComponent {
   inpStudent: string = ''
 
   /* Objects Array */
-  products = [
+  products: Product[] = [
     {
       name: 'El mejor juguete',
       price: 200,
