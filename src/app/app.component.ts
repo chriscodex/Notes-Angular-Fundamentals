@@ -1,3 +1,4 @@
+import { HtmlTagDefinition } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 /* AppComponent class properties need to be public */
@@ -31,6 +32,7 @@ export class AppComponent {
 
   /* Capturar el evento */
   onScroll(event: Event) {
-
+    const element = event.target as HTMLElement
+    console.log(element.scrollTop)
   }
 }
