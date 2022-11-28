@@ -32,7 +32,7 @@ export class AppComponent {
     {
       name: 'El mejor juguete',
       price: 200,
-      image: './src/app/assets/juguete.png'
+      image: './assets/images/juguete.jpg'
     }
   ]
 
