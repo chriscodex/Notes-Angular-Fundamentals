@@ -1,6 +1,6 @@
 .box{
-  height: 200px;
+  height: 100px;
   width: 200px;
-  overflow: auto;
+  overflow-y: scroll;
   background: red;
 }

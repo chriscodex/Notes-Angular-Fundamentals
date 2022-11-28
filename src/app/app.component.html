@@ -25,8 +25,25 @@
 <!--Usando objetos-->
 <img [src]="person.avatar" alt="image" width="100"/>
 
-<div class="box">
+<div class="box" (scroll)="onScroll($event)">
   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga odio ipsum illum non quam vel consequatur quia! Harum quaerat et ratione impedit ullam veritatis quo cumque quisquam, esse dolorem provident.</p>
 </div>
-
-
+<hr/>
+<!--Event Binding-->
+<div>
+  <h2>Event Binding</h2>
+  <input type="text" [value]="person.name" (keyup)="changeName($event)">
+  <p>Nombre: {{person.name}}</p>
+</div>
+<hr/>
+<!--ngModel-->
+<div>
+  <h2>ngModel - Intercambio bidireccional</h2>
+  <input type="text" [(ngModel)]="person.name"/>
+  <p>Nombre: {{person.name}}</p>
+</div>
+<div>
+  <h2>ngModel - Validaciones</h2>
+  <input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
+  <p>Valid: {{nameInput.valid}}</p>
+</div>
