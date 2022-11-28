@@ -31,7 +31,8 @@ export class AppComponent {
   products = [
     {
       name: 'El mejor juguete',
-      price: 200
+      price: 200,
+      image: './src/app/assets/juguete.png'
     }
   ]
 
