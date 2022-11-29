@@ -50,6 +50,11 @@ export class AppComponent {
       price: 800,
       image: './assets/images/celular.jpg'
     },
+    {
+      name: 'Mando Xbox series S',
+      price: 300,
+      image: './assets/images/xbox.jpg'
+    },
   ]
 
   /* Métodos */
