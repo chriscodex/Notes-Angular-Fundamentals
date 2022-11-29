@@ -56,7 +56,7 @@ export class AppComponent {
       image: './assets/images/xbox.jpg'
     },
     {
-      name: 'Estabilizadoe Forza',
+      name: 'Estabilizador Forza',
       price: 190,
       image: './assets/images/estabilizador.jpg'
     }
