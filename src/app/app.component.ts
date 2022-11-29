@@ -45,6 +45,11 @@ export class AppComponent {
       price: 300,
       image: './assets/images/albumes.jpg'
     },
+    {
+      name: 'Celular casi nuevo',
+      price: 800,
+      image: './assets/images/celular.jpg'
+    },
   ]
 
   /* Métodos */
