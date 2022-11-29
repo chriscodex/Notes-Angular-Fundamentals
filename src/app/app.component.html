@@ -102,3 +102,13 @@
     <img [src]="product.image" alt="image" width="500">
   </div>
 </div>
+<hr/>
+
+<!--ngSwitch - Switch conditional-->
+<input type="text" [(ngModel)]="inpStudent">
+<div [ngSwitch]="inpStudent">
+  <p *ngSwitchCase="'Leo'">Mi nombre es Leo</p>
+  <p *ngSwitchCase="'Nicolas'">Mi nombre es Nicolas</p>
+  <p *ngSwitchCase="'Gonzalo'">Mi nombre es Gonzalo</p>
+  <p *ngSwitchDefault>Ningún nombre coincide</p>
+</div>

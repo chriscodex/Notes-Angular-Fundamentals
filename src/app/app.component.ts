@@ -40,11 +40,6 @@ export class AppComponent {
       price: 300,
       image: './assets/images/bicicleta.jpg'
     },
-    {
-      name: 'Colección de albumes',
-      price: 300,
-      image: './assets/images/albumes.jpg'
-    }
   ]
 
   /* Métodos */
