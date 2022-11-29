@@ -25,6 +25,11 @@ export class AppComponent {
     lastName: 'Rojas',
     avatar: 'https://us.123rf.com/450wm/redlinevector/redlinevector1704/redlinevector170402590/75360779-icono-simple-del-programador.jpg?ver=6'
   }
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  }
   /* Array */
   studentsArr: string[] = ['Leo','Gonzalo', 'Juan']
   inpStudent: string = ''
