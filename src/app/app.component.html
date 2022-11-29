@@ -168,8 +168,35 @@
     <input type="number" [(ngModel)]="box.height"/>
     <input type="color" [(ngModel)]="box.background"/>
   </div>
-  <div>
-
-
-  </div>
+  <div [ngStyle]="{
+    'width.px': box.width,
+    'height.px': box.height,
+    'background-color': box.background,
+    'display': 'block'
+  }"></div>
 </div>
+<hr/>
+<!--Formularios-->
+<div>
+  <h2>Formulario</h2>
+  <form (ngSubmit)="onRegister()" #myForm="ngForm">
+    <div class="input-group">
+      <label for="name">Nombre</label>
+      <input type="text" name="name" required id="name" [(ngModel)]="register.name">
+      <p>Mensaje de error</p>
+    </div>
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="text" name="email"  required id="email" [(ngModel)]="register.email">
+      <p>Mensaje de error</p>
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="text" name="password"  required id="password" [(ngModel)]="register.password">
+      <p>Mensaje de error</p>
+    </div>
+    <button type="submit" [disabled]="myForm.invalid">Registrar</button>
+    <button type="button">Acción</button>
+  </form>
+</div>
+

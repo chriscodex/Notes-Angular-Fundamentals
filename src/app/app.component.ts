@@ -68,6 +68,13 @@ export class AppComponent {
     }
   ]
 
+  /* Formulario */
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
+
   /* Métodos */
   increaseAge() {
     this.age += 1
@@ -95,5 +102,9 @@ export class AppComponent {
 
   deleteStudent(index: number) {
     this.studentsArr.splice(index, 1)
+  }
+
+  onRegister() {
+    console.log(this.register)
   }
 }
